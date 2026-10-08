@@ -1,11 +1,12 @@
 # Implementación de Pilas Estáticas y Dinámicas en Java
 
+## 1. Descripción del proyecto
+
 Este proyecto implementa dos tipos de estructuras de datos lineales en Java: una pila estática y una pila dinámica.
 Ambas estructuras siguen el principio LIFO (*Last In, First Out*), que significa que el último elemento en entrar es el primero en salir.
-El objetivo es comprender cómo funcionan las pilas, cómo se insertan y extraen elementos, 
-y cuáles son las diferencias entre almacenar información en un arreglo y hacerlo mediante nodos enlazados.
+El objetivo es comprender cómo funcionan las pilas, cómo se insertan y extraen elementos, y cuáles son las diferencias entre almacenar información en un arreglo y hacerlo mediante nodos enlazados.
 
-## 1. Estructura del proyecto
+## 2. Estructura del proyecto
 
 El proyecto está organizado en el paquete `Estructuras_lineales` y contiene las siguientes clases:
 
@@ -26,7 +27,7 @@ Estructuras_lineales/
 - **Nodo.java:** representa cada nodo de la pila dinámica. Almacena un dato entero y una referencia al siguiente nodo.
 - **Main.java:** contiene el método `main` para probar la pila dinámica.
 
-## 2. Diferencias entre la pila estática y la dinámica
+## 3. Diferencias entre la pila estática y la dinámica
 
 ### Pila estática
 
@@ -55,6 +56,7 @@ Nodo siguiente;
 
 La variable `cima` apunta al nodo que se encuentra en la parte superior de la pila.
 Cuando la pila está vacía, `cima` vale `null`.
+
 A diferencia de la pila estática, la pila dinámica no tiene una capacidad máxima establecida mediante un arreglo. Puede crecer mientras haya memoria disponible, aunque la creación de nuevos nodos está limitada por los recursos del sistema.
 
 ### Comparación
@@ -73,7 +75,7 @@ A diferencia de la pila estática, la pila dinámica no tiene una capacidad máx
 
 En conclusión, la pila estática tiene una capacidad definida desde su creación, mientras que la pila dinámica administra sus elementos mediante referencias entre nodos.
 
-## 3. Métodos implementados
+## 4. Métodos implementados
 
 Ambas pilas cuentan con los métodos necesarios para insertar, extraer, mostrar y consultar elementos.
 
@@ -148,12 +150,41 @@ Este método se utiliza exclusivamente en la pila estática.
 Devuelve `true` cuando el arreglo alcanzó su capacidad máxima y `false` cuando todavía tiene espacio disponible.
 La pila dinámica no necesita este método en esta actividad porque su capacidad no se establece mediante un arreglo de tamaño fijo.
 
+## 5. Requisitos previos
 
-## 4. Prueba de ejecución de la pila estática
+Para compilar y ejecutar el proyecto se necesita:
+
+- Tener instalado el JDK (Java Development Kit).
+- Contar con un editor o IDE compatible con Java, como IntelliJ IDEA, Eclipse o Visual Studio Code.
+- Tener las clases dentro del paquete `Estructuras_lineales`.
+
+Para comprobar que Java está instalado, abre una terminal y ejecuta:
+
+```bash
+java -version
+javac -version
+```
+
+Ambos comandos deben mostrar la versión instalada de Java.
+
+## 6. Compilación y ejecución desde un IDE
+
+Si se utiliza un IDE, también se puede ejecutar el proyecto de la siguiente manera:
+
+1. Abrir el proyecto en el IDE.
+2. Localizar la clase `LanzadorPilaSimple.java`.
+3. Ejecutar su método `main` para probar la pila estática.
+4. Localizar la clase `Main.java`.
+5. Ejecutar su método `main` para probar la pila dinámica.
+6. Revisar los resultados en la consola del IDE.
+
+**Importante:** se debe ejecutar cada clase principal por separado, porque cada una prueba una implementación diferente de la pila.
+
+## 7. Prueba de ejecución de la pila estática
 
 La pila estática tiene una capacidad máxima de cinco elementos.
-El siguiente ejemplo corresponde al programa `LanzadorPilaSimple.java` que inserta los elementos `10`, `20` y `30`,
-muestra la pila, consulta su cima, extrae un elemento y vuelve a mostrar el contenido.
+
+El siguiente ejemplo corresponde al programa `LanzadorPilaSimple.java` que inserta los elementos `10`, `20` y `30`, muestra la pila, consulta su cima, extrae un elemento y vuelve a mostrar el contenido.
 
 ### Código de prueba
 
@@ -193,7 +224,7 @@ Pila actual: 10 20
 4. El método `pop()` extrae el valor `30`.
 5. Finalmente, `mostrar()` imprime los elementos restantes: `10` y `20`.
 
-## 5. Prueba de ejecución de la pila dinámica
+## 8. Prueba de ejecución de la pila dinámica
 
 La pila dinámica utiliza nodos enlazados y no tiene una capacidad máxima fija definida en el código.
 El siguiente ejemplo corresponde al programa `Main.java`.
@@ -271,13 +302,11 @@ Pila dinámica (cima -> fondo):
 8. La pila vuelve a quedar vacía y `isEmpty()` devuelve `true`.
 9. Los últimos intentos de consultar y extraer elementos muestran mensajes de pila vacía.
 
-## 6. Conclusión
+## 9. Conclusión
 
 La implementación de estas dos estructuras permite comprender cómo funciona una pila y cómo se aplica el principio LIFO.
-La pila estática almacena los datos en un arreglo de capacidad fija, lo que facilita el acceso mediante índices, 
-pero limita la cantidad de elementos que pueden insertarse.
-La pila dinámica utiliza nodos enlazados que se crean conforme se insertan elementos. 
-Esto permite que la estructura crezca según la memoria disponible y evita establecer una capacidad fija desde el principio.
+La pila estática almacena los datos en un arreglo de capacidad fija, lo que facilita el acceso mediante índices, pero limita la cantidad de elementos que pueden insertarse.
+La pila dinámica utiliza nodos enlazados que se crean conforme se insertan elementos. Esto permite que la estructura crezca según la memoria disponible y evita establecer una capacidad fija desde el principio.
 Ambas implementaciones permiten insertar, extraer, mostrar y consultar elementos, además de verificar si la pila está vacía.
 En conclusión, las dos estructuras cumplen la misma función, pero utilizan mecanismos diferentes para administrar la memoria y organizar sus elementos.
 
