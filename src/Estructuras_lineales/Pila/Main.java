@@ -1,4 +1,4 @@
-package Estructuras_lineales;
+package Estructuras_lineales.Pila;
 
 public class Main {
     public static void main (String[] args) {

@@ -1,4 +1,4 @@
-package Estructuras_lineales;
+package Estructuras_lineales.Pila;
 
 public class PilaDinamica {
     //referencia al nodo que esta en la cima de la pila

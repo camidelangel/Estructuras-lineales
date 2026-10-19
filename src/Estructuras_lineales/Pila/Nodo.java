@@ -13,7 +13,6 @@ public class Nodo {
 
         //guardamos el valor recibido
         this.dato = x; //para que nasca con un valor y no con basura
-
         //el nodo comienza sin apuntar a otro nodo
         this.siguiente = null;   //al nacer, no apunte a nadie todavia
     }

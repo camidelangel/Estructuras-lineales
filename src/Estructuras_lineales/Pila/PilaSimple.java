@@ -1,4 +1,4 @@
-package Estructuras_lineales;
+package Estructuras_lineales.Pila;
 
 public class PilaSimple {
     //arreglo donde se almacenan los elementos de la pila
