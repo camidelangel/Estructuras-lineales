@@ -1,12 +1,12 @@
-package Estructuras_lineales;
+package Estructuras_lineales.Pila;
 
 public class Nodo {
     //valor entero que almacenara el nodo
-    int dato;
+    public int dato;
 
     //referencia al siguiente nodo de la pila
     //la flecha que aunta al de abajo tiene que se de la misma clase
-    Nodo siguiente;
+    public Nodo siguiente;
 
     //constructor del nodo: recibe el valor que guardará el nodo
     public Nodo(int x) {
